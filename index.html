@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="dark:bg-gray-900" onload="loadBooks">
+    <div class="relative overflow-x-auto m-10">
+      <table
+        class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400"
+      >
+        <thead
+          class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+        >
+          <tr>
+            <th scope="col" class="px-6 py-3">ID <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M10 7v2H9v6h1v2H6v-2h1V9H6V7zm6 0a2 2 0 0 1 2 2v6c0 1.11-.89 2-2 2h-4V7m4 2h-2v6h2z"/></svg></th>
+            <th scope="col" class="px-6 py-3">Titre <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M4 20q-.825 0-1.412-.587T2 18V6q0-.825.588-1.412T4 4h16q.825 0 1.413.588T22 6v12q0 .825-.587 1.413T20 20zm2-4h8v-2H6zm10 0h2v-2h-2zM6 12h2v-2H6zm4 0h8v-2h-8z"/></svg></th>
+            <th scope="col" class="px-6 py-3">Auteur <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M14 21v-3.075l5.525-5.5q.225-.225.5-.325t.55-.1q.3 0 .575.113t.5.337l.925.925q.2.225.313.5t.112.55t-.1.563t-.325.512l-5.5 5.5zM4 20v-2.8q0-.85.438-1.562T5.6 14.55q1.55-.775 3.15-1.162T12 13q.925 0 1.825.113t1.8.362L12 17.1V20zm16.575-4.6l.925-.975l-.925-.925l-.95.95zM12 12q-1.65 0-2.825-1.175T8 8t1.175-2.825T12 4t2.825 1.175T16 8t-1.175 2.825T12 12"/></svg></th>
+            <th scope="col" class="px-6 py-3">Prix <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 512 512"><path d="M442 107v141L229.2 451.7c8 8 20.8 12.3 28.8 12.3s22.8-3.7 31.4-12.3L480 272V144l-38-37z" fill="currentColor"/><path d="M384 48H224L44.3 235.6c-8 8-12 17.8-12.3 28.4-.3 11.3 3.7 23.3 12.3 31.9l123.8 123.6c8 8 20.8 12.5 28.8 12.5s22.7-3.9 31.3-12.5L416 240V80l-32-32zm-30.7 102.7c-21.7 6.1-41.3-10-41.3-30.7 0-17.7 14.3-32 32-32 20.7 0 36.8 19.6 30.7 41.3-2.9 10.3-11.1 18.5-21.4 21.4z" fill="currentColor"/></svg></th>
+            <th scope="col" class="px-6 py-3">modifier <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M15.275 12.475L11.525 8.7L14.3 5.95l-.725-.725L8.1 10.7L6.7 9.3l5.45-5.475q.6-.6 1.413-.6t1.412.6l.725.725l1.25-1.25q.3-.3.713-.3t.712.3L20.7 5.625q.3.3.3.713t-.3.712zM6.75 21H3v-3.75l7.1-7.125l3.775 3.75z"/></svg></th>
+            <th scope="col" class="px-6 py-3">Supprimer <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="currentColor" d="M9 3h6v1h5v2h-1v4.3q-.425-.125-.987-.213T17 10t-1.012.075t-.988.2V8h-2v3.25q-.55.4-1.1.987T11 13.4V8H9v9h1q0 .975.35 2.088t.9 1.912H7q-.825 0-1.412-.587T5 19V6H4V4h5zm8 9q2.075 0 3.538 1.463T22 17t-1.463 3.538T17 22t-3.537-1.463T12 17t1.463-3.537T17 12m-.5 2v3.2l2.15 2.15l.7-.7l-1.85-1.85V14z"/></svg></th>
+          </tr>
+        </thead>
+        <tbody id="tbod">
+        </tbody>
+      </table>
+    </div>
+<input type="checkbox" id="toggleForm" class="hidden peer">
+<label for="toggleForm" class="px-6 py-4 bg-blue-500 text-white cursor-pointer rounded-md mx-10">Ajouter Une Livre</label>
+<div class="mt-4 p-4 border rounded-md shadow-md bg-gray-50 dark:bg-gray-800 hidden peer-checked:block m-10">
+    <h2 class="dark:text-gray-400">Ajouter</h2> 
+    <label for="tit" class="block text-sm text-gray-700 dark:text-gray-300">Titre:</label>
+    <input type="text" id="tit" name="tit" class="w-full px-4 py-2 mt-1 border rounded-md">
+
+    <label for="aut" class="block text-sm text-gray-700 dark:text-gray-300 mt-4">Auteur:</label>
+    <input type="text" id="aut" name="aut" class="w-full px-4 py-2 mt-1 border rounded-md">
+
+    <label for="prx" class="block text-sm text-gray-700 dark:text-gray-300 mt-4">Prix:</label>
+    <input type="text" id="prx" name="prx" class="w-full px-4 py-2 mt-1 border rounded-md">
+
+    <button onclick="ajt()" class="mt-4 px-6 py-2 bg-green-500 text-white rounded-md">Valider</button>
+</div>
+<div id="editForm" class="mt-4 p-4 border rounded-md shadow-md bg-gray-50 dark:bg-gray-800 hidden">
+    <h2 class="dark:text-gray-400">modifier</h2> 
+    <label for="editTit" class="block text-sm text-gray-700 dark:text-gray-300">Titre:</label>
+    <input type="text" id="editTit" name="editTit" class="w-full px-4 py-2 mt-1 border rounded-md">
+
+    <label for="editAut" class="block text-sm text-gray-700 dark:text-gray-300 mt-4">Auteur:</label>
+    <input type="text" id="editAut" name="editAut" class="w-full px-4 py-2 mt-1 border rounded-md">
+
+    <label for="editPrx" class="block text-sm text-gray-700 dark:text-gray-300 mt-4">Prix:</label>
+    <input type="text" id="editPrx" name="editPrx" class="w-full px-4 py-2 mt-1 border rounded-md">
+
+    <button onclick="edit()" id="saveButton" class="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md" >Save</button>
+</div>
+  </body>
+</html>
+<script src="main.js"></script>
