@@ -1,20 +1,13 @@
-var books = [
-    {
-      "title": "The Night Circus",
-      "author": "Erin Morgenstern",
-      "price": 12.99
-    },
-    {
-      "title": "Educated",
-      "author": "Tara Westover",
-      "price": 14.99
-    },
-    {
-      "title": "Dune",
-      "author": "Frank Herbert",
-      "price": 10.99
-    }
-  ];
+var books = [];
+fetch('data.json')
+  .then(resp => resp.json())
+  .then(data => {
+    
+     books = data;
+     loadBooks()
+  })
+  .catch(error => console.error('Error fetching Json:', error));
+
   var tb = document.getElementById("tbod");
   function loadBook(i,x1,x2,x3){
 
@@ -61,7 +54,6 @@ var books = [
   function ajt()
   {
      tit = document.getElementById("tit").value
-     console.log(tit);
      aut = document.getElementById("aut").value
      prx = document.getElementById("prx").value
      var newBook = {
@@ -71,7 +63,7 @@ var books = [
       };
       books.push(newBook)
       loadBooks();
-  }
+    }
   function dlt(index){
     books.splice(index, 1);
     loadBooks();

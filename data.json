@@ -1,0 +1,17 @@
+ [
+    {
+      "title": "The Night Circus",
+      "author": "Erin Morgenstern",
+      "price": 12.99
+    },
+    {
+      "title": "Educated",
+      "author": "Tara Westover",
+      "price": 14.99
+    },
+    {
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "price": 10.99
+    }
+  ]
