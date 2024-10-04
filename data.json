@@ -13,5 +13,105 @@
       "title": "Dune",
       "author": "Frank Herbert",
       "price": 10.99
+    },
+    {
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "price": 8.99
+    },
+    {
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "price": 9.99
+    },
+    {
+      "title": "1984",
+      "author": "George Orwell",
+      "price": 7.99
+    },
+    {
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "price": 10.49
+    },
+    {
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "price": 12.99
+    },
+    {
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "price": 11.49
+    },
+    {
+      "title": "The Road",
+      "author": "Cormac McCarthy",
+      "price": 13.99
+    },
+    {
+      "title": "Moby Dick",
+      "author": "Herman Melville",
+      "price": 9.99
+    },
+    {
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "price": 8.49
+    },
+    {
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "price": 15.99
+    },
+    {
+      "title": "Slaughterhouse-Five",
+      "author": "Kurt Vonnegut",
+      "price": 9.49
+    },
+    {
+      "title": "Animal Farm",
+      "author": "George Orwell",
+      "price": 6.99
+    },
+    {
+      "title": "The Handmaid's Tale",
+      "author": "Margaret Atwood",
+      "price": 12.99
+    },
+    {
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "price": 7.99
+    },
+    {
+      "title": "The Shining",
+      "author": "Stephen King",
+      "price": 13.49
+    },
+    {
+      "title": "The Name of the Wind",
+      "author": "Patrick Rothfuss",
+      "price": 14.99
+    },
+    {
+      "title": "The Book Thief",
+      "author": "Markus Zusak",
+      "price": 10.99
+    },
+    {
+      "title": "The Girl on the Train",
+      "author": "Paula Hawkins",
+      "price": 11.99
+    },
+    {
+      "title": "Little Women",
+      "author": "Louisa May Alcott",
+      "price": 9.49
+    },
+    {
+      "title": "Gone Girl",
+      "author": "Gillian Flynn",
+      "price": 13.99
     }
   ]
